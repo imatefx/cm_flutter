@@ -31,7 +31,7 @@ class AbsenseListCardView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  AbsenseMemberNameTextWidget(
+                  AbsenseMemberProfileDetailWidget(
                       absenseListModel: absenseListModel),
                   AbsenseTypeChipWidget(absenseListModel: absenseListModel)
                 ],
@@ -53,6 +53,50 @@ class AbsenseListCardView extends StatelessWidget {
       ),
     );
     ;
+  }
+}
+
+class AbsenseMemberProfileDetailWidget extends StatelessWidget {
+  const AbsenseMemberProfileDetailWidget({
+    super.key,
+    required this.absenseListModel,
+  });
+
+  final AbsenseListModel? absenseListModel;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            // if (absenseListModel?.userDoc?.image != null)
+            AbsenseMemberProfilePicWidget(absenseListModel: absenseListModel),
+            SizedBox(
+              width: 10,
+            ),
+            AbsenseMemberNameTextWidget(absenseListModel: absenseListModel),
+          ],
+        )
+      ],
+    );
+  }
+}
+
+class AbsenseMemberProfilePicWidget extends StatelessWidget {
+  const AbsenseMemberProfilePicWidget({
+    super.key,
+    required this.absenseListModel,
+  });
+
+  final AbsenseListModel? absenseListModel;
+
+  @override
+  Widget build(BuildContext context) {
+    return CircleAvatar(
+      backgroundImage: NetworkImage(
+          "${absenseListModel!.userDoc!.image}?t=${DateTime.now()}"),
+    );
   }
 }
 
