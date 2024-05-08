@@ -8,7 +8,7 @@ class AbsenseListProvider extends GetConnect{
   Future<Result<AbsenseListResponse, Exception, Exception, Exception>>
   getAbsenseList(AbsenseListRequest data) async {
     final response =
-    await post('${BASE_URL}v1/absences/listWithMembers', data.toJson());
+    await post('${BASE_URL}/api/v1/absences/listWithMembers', data.toJson());
 
     switch (response.statusCode) {
       case 200:
