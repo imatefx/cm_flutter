@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       color: Colors.blue,
       location: BannerLocation.topEnd,
       child: GetMaterialApp(
-        title: 'Flutter Demo',
+        title: 'Crewmeister',
         theme: FlexThemeData.light(
             scheme: FlexScheme.orangeM3, useMaterial3: true),
         darkTheme:

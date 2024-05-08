@@ -72,7 +72,7 @@ class AbsenseMemberProfileDetailWidget extends StatelessWidget {
           children: [
             // if (absenseListModel?.userDoc?.image != null)
             AbsenseMemberProfilePicWidget(absenseListModel: absenseListModel),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             AbsenseMemberNameTextWidget(absenseListModel: absenseListModel),
@@ -117,7 +117,7 @@ class AbsenseAdmitterNoteTextWidget extends StatelessWidget {
         maxLines: 2,
       );
     } else {
-      return SizedBox.shrink();
+      return const SizedBox.shrink();
     }
   }
 }
@@ -157,7 +157,7 @@ class AbsenseMemberNoteTextWidget extends StatelessWidget {
         maxLines: 2,
       );
     } else {
-      return SizedBox.shrink();
+      return const SizedBox.shrink();
     }
   }
 }
