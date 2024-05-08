@@ -1,4 +1,3 @@
-import 'package:cm_flutter/app/modules/home/views/home_view.dart';
 import 'package:cm_flutter/app/routes/app_pages.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
