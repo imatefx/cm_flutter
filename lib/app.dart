@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         darkTheme:
             FlexThemeData.dark(scheme: FlexScheme.orangeM3, useMaterial3: true),
         themeMode: ThemeMode.system,
-        home: const HomeView(),
+        // home: const HomeView(),
         initialRoute: AppPages.INITIAL,
         getPages: AppPages.routes,
         debugShowCheckedModeBanner: false,

@@ -4,9 +4,11 @@ part of 'app_pages.dart';
 abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;
+  static const ABSENSE_MANAGER_LIST = _Paths.ABSENSE_MANAGER_LIST;
 }
 
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
+  static const ABSENSE_MANAGER_LIST = '/absense_manager/list';
 }
