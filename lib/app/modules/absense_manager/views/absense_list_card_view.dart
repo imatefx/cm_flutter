@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cm_flutter/app/helpers/common_functions.dart';
 import 'package:cm_flutter/app/models/absense_list_response.dart';
 import 'package:flutter/material.dart';
@@ -93,9 +94,18 @@ class AbsenseMemberProfilePicWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      backgroundImage: NetworkImage(
-          "${absenseListModel!.userDoc!.image}?t=${DateTime.now()}"),
+    return CachedNetworkImage(
+      imageUrl: "${absenseListModel!.userDoc!.image}?t=${DateTime.now()}",
+      imageBuilder: (context, imageProvider) => Container(
+        width: 40.0,
+        height: 40.0,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(image: imageProvider, fit: BoxFit.cover),
+        ),
+      ),
+      placeholder: (context, url) => CircularProgressIndicator(),
+      errorWidget: (context, url, error) => Icon(Icons.error),
     );
   }
 }
