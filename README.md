@@ -3,6 +3,13 @@
 ### Demo video
 https://drive.google.com/file/d/1hsCnywkvMl1JNKyzLYeM3WYoFyxUWJHl/view?usp=sharing
 
+### Live Links
+#### Hosted Url
+https://crew.imatefx.com/
+
+#### API Documentation Url
+https://crew.imatefx.com/api/openapi/ui#/
+
 ### Run Development flavour
 ```
 flutter run -t lib/main_dev.dart
