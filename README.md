@@ -1,5 +1,8 @@
 ## Getting Started
 
+### Demo video
+https://drive.google.com/file/d/1hsCnywkvMl1JNKyzLYeM3WYoFyxUWJHl/view?usp=sharing
+
 ### Run Development flavour
 ```
 flutter run -t lib/main_dev.dart
